@@ -1,0 +1,8 @@
+group 'cl.puc.ing.edgedewsim'
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+

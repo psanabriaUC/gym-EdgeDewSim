@@ -1,0 +1,24 @@
+;networkEnergyManagementEnable: true
+
+;nodeFile
+sim_input/nodes/1A100.cnf
+
+;loadBalancing: cl.puc.ing.edgedewsim.gridgain.spi.loadbalacing.energyaware.GridEnergyAwareLoadBalancing
+;comparator: cl.puc.ing.edgedewsim.gridgain.information.comparator.seas.EnhancedSEASComparator
+
+;batteryFile
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000001
+
+
+;batteryFullCpuUsageFile
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000001
+
+
+;cpuFile
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000001
+
+;jobsEvent
+sim_input/jobs/2JOBS.cnf
+
+;wifiSignalStrength
+-50; 00000000-0000-0000-0000-000000000001

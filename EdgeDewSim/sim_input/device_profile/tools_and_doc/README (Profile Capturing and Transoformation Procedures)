@@ -1,0 +1,22 @@
+Autor: Matías Hirsch
+Fecha: 04/03/15
+
+Este documento describe el procedimiento a realizar para la captura de perfiles de uso de CPU de un dispositivo móvil (pasos 1 al 5) y el procedimiento para convertir estas capturas en eventos del simulador (pasos 6 al 9). Los pasos del 6 al 9 se pueden ejecutar con el script "profilePostCapturingProcedure.sh" ubicado en este directorio. Dichos procedimientos comprenden los siguientes pasos:
+
+1- Llevar el nivel de batería del dispositivo al 100% de carga.
+
+2- Cargar la aplicación Android que realiza la toma de muestras de CPU y batería en el dispositivo. Para ello, compilar el proyecto AndroidCPUBatteryProfiler en la version android del dispositivo.
+
+3- Con la batería al 100% de carga pero todavía enchufada al toma corriente y la WIFI conectada a alguna red, abrir la aplicación de toma de perfiles mencionada en el paso anterior y configurar los parámetros deseados. El primer parámetro indica el nivel de uso de cpu para el cual se desea generar el perfil de desgaste de batería (1 = 100% de uso, 0.3 = 30% de uso, 0.75 = 75% de uso, etc.). El segundo parámetro es para indicar el error máximo que se permite entre muestra y muestra (por defecto es 0.02 y puede dejarse ese valor). El último parámetro es para indicar la cantidad de cores del dispositivo (cerciorarse de poner el valor correcto, de lo contrario el perfil no estará capturando el uso de CPU deseado para todos los cores).
+
+4- Iniciar la toma del perfil de desgaste de batería configurado. Para ello, presionar el botón Start de la aplicación de toma de perfiles y esperar que se muestre la leyenda "Disconnect Device" debajo del botón de Start para desenchufar el dispositivo del tomacorriente. Cuando eso ocurra, apagar la pantalla del dispositivo y esperar un tiempo prudente hasta que el dispositivo se quede sin batería (esto dependerá del nivel de uso de CPU). No realizar ninguna interacción con el dispositivo hasta estar seguro de que su batería se ha consumido (a fin de evitar que el perfil se altere).
+
+5- Una vez consumida la batería del dispositivo retirar el archivo CpuBatProfile.txt que se encuentra en el directorio raíz del dispositivo. De no existir, crear la estructura de directorios de perfiles del dispositivo en cuestión. La convención que se ha adoptado puede chequearse de otros directorios de perfiles ya existentes pero basicamente es un directorio cuyo nombre es el modelo del dispositivo y dentro de éste otro directorio con el nombre "raw_samples". Ubicar dentro del directorio "raw_samples" el archivo CpuBatProfile.txt y renombrarlo anexándole como sufijo el valor de cpu al que hace referencia, ej., CpuBatProfile0.txt.
+
+6- Convertir los raw samples contenidos en el archivo CpuBatProfileX.txt en eventos del simulador. Para ello, utilizar el proyecto eclipse "RawData2SimData". Luego de ejecutar este paso se habrán generado los archivos batteryX.cnf y cpuX.cnf.
+
+7- Quitar el offset de los archivos batteryX.cnf y cpuX.cnf utilizando la aplicación profile_offset_remover.jar a la que debe proveerse dos parámetros. El primero es el archivo que contiene los eventos con offset y el segundo es el archivo donde se redirigirán los eventos sin offset. (La aplicación profile_offset_remover.jar esta contenida dentro del proyecto eclipse FileGenerator)
+
+8- Interpolar el archivo batteryX.cnf utilizando el proyecto eclipse BatteryInterpolator.
+
+9- Ubicar los archivos batteryX.cnf y cpuX.cnf dentro del directorio de perfiles del dispositivo correspondiente.

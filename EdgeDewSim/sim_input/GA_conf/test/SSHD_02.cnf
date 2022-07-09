@@ -1,0 +1,17 @@
+#		 jobs_count	nodes_count
+;gene_data 500 10
+
+;population_size 10
+
+# possible values: MinThresholdFitnessCondition 51.86 | ImprovementThresholdCondition 0.5 1000
+;termination_condition ImprovementThresholdCondition 0.5 1000
+
+# possible values:  			  n=[4 | 10] withRepositionFlag=[true | false]
+;parent_selection TournamentParentSelector 4 true
+# possible values:		    points=[2|10] pc=[0.6|0.8]	
+;crossover_operator MPointCrossoverOperator 2 0.6
+
+
+;mutation_operator IncrementalMutationOperator 0.15
+
+;population_replacement DeterministicCrowding

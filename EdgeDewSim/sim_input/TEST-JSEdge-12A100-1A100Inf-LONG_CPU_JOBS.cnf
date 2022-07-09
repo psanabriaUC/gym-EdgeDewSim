@@ -1,0 +1,74 @@
+;loadBalancing: cl.puc.ing.edgedewsim.edge.proxy.jobstealing.EdgeStealerProxy
+
+;policy: cl.puc.ing.edgedewsim.seas.proxy.jobstealing.FixedNumberPolicy FixedNum=1
+;strategy: cl.puc.ing.edgedewsim.edge.proxy.jobstealing.EdgeBRAStrategy
+
+;networkEnergyManagementEnable: true
+
+;nodeFile
+sim_input/nodes/13A100Inf.cnf
+
+;batteryFile
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000001
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000002
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000003
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000004
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000005
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000006
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000007
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000008
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000009
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000010
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000011
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000012
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000013
+
+
+;batteryFullCpuUsageFile
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000001
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000002
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000003
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000004
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000005
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000006
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000007
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000008
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000009
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000010
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000011
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000012
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000013
+
+
+;cpuFile
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000001
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000002
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000003
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000004
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000005
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000006
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000007
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000008
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000009
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000010
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000011
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000012
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000013
+
+;jobsEvent
+sim_input/jobs/longCPU.cnf
+
+;wifiSignalStrength
+-50; 00000000-0000-0000-0000-000000000001
+-50; 00000000-0000-0000-0000-000000000002
+-50; 00000000-0000-0000-0000-000000000003
+-50; 00000000-0000-0000-0000-000000000004
+-50; 00000000-0000-0000-0000-000000000005
+-50; 00000000-0000-0000-0000-000000000006
+-50; 00000000-0000-0000-0000-000000000007
+-50; 00000000-0000-0000-0000-000000000008
+-50; 00000000-0000-0000-0000-000000000009
+-50; 00000000-0000-0000-0000-000000000010
+-50; 00000000-0000-0000-0000-000000000011
+-50; 00000000-0000-0000-0000-000000000012
+-50; 00000000-0000-0000-0000-000000000013

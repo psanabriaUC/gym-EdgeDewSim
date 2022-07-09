@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cl.puc.ing.edgedewsim.mobilegrid.persistence.dbentity.JobTransfer">
+
+    <insert id="insertJobTransfered" parameterType="cl.puc.ing.edgedewsim.mobilegrid.persistence.dbentity.JobTransfer">
+        <selectKey keyProperty="jobtransfered_id" order="BEFORE" resultType="integer">
+            CALL NEXT VALUE FOR JOBTRANSFERED_SEQ
+        </selectKey>
+        INSERT INTO
+        JOBTRANSFERED (jobtransfered_id,
+        jobstats_id,
+        from_device_id,
+        to_device_id,
+        hop,
+        time,
+        startTime,
+        last_hop)
+
+        VALUES ( #{jobtransfered_id},
+        #{jobstats_id},
+        #{from_device_id},
+        #{to_device_id},
+        #{hop},
+        #{time},
+        #{startTime},
+        #{lastHop})
+    </insert>
+
+
+</mapper>

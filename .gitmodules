@@ -1,0 +1,3 @@
+[submodule "EdgeDewSim"]
+	path = EdgeDewSim
+	url = https://github.com/psanabriaUC/EdgeDewSim.git

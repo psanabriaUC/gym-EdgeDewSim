@@ -1,0 +1,5 @@
+rootProject.name = 'EdgeDewSim'
+include 'MobileGrid'
+include 'Simulator'
+include 'MobileGridSimulation'
+

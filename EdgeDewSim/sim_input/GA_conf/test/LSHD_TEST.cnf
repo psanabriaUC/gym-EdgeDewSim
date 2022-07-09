@@ -1,0 +1,17 @@
+#jobs_count	nodes_count
+;gene_data 25 1
+
+;population_params 50 true
+
+# possible values: MinThresholdFitnessCondition 0.000524 | ImprovementThresholdCondition 0.000005 100 | SingleIndividualMinThresholdFitnessCondition
+;termination_condition IncreasedFitnessTimeCondition 1000 300000
+
+# possible values:  			  n=[4 | 10] withRepositionFlag=[true | false]
+;parent_selection TournamentParentSelector 10 true
+# possible values: UniformCrossoverOperator | HalfUniformCrossoverOperator | MPointCrossoverOperator points=[2|10] pc=[0.6|0.8]	
+;crossover_operator UniformCrossoverOperator 0.6
+
+#possible values:   IncrementalMutationOperator | RandomMutationOperator pm=[0.15 | 0.30] 
+;mutation_operator RandomMutationOperator 0.15
+
+;population_replacement DeterministicCrowding

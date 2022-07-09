@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cl.puc.ing.edgedewsim.mobilegrid.persistence.dbentity.JobStatsTuple">
+
+    <insert id="insertJobStats"
+            parameterType="cl.puc.ing.edgedewsim.mobilegrid.persistence.dbentity.JobStatsTuple">
+        <selectKey keyProperty="jobstats_id" order="BEFORE" resultType="integer">
+            CALL NEXT VALUE FOR JOBSTATS_SEQ
+        </selectKey>
+        INSERT INTO
+        JOBSTATS (jobstats_id,
+        job_id,
+        sim_id,
+        success,
+        success_transfered_back,
+        start_time,
+        start_exec_time,
+        finish_time,
+        last_transfered_node)
+
+        VALUES ( #{jobstats_id},
+        #{job_id},
+        #{sim_id},
+        #{success},
+        #{successTransferBack},
+        #{startTime},
+        #{startExecutionTime},
+        #{finishTime},
+        #{lastTransferedNode})
+    </insert>
+
+</mapper>

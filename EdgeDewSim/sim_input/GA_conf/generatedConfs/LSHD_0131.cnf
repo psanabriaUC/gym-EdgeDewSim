@@ -1,0 +1,7 @@
+;gene_data 5000 100
+;population_params 100 true
+;termination_condition IncreasedFitnessTimeCondition 60000 300000
+;parent_selection TournamentParentSelector 10 true
+;crossover_operator HalfUniformCrossoverOperator 0.8
+;mutation_operator IncrementalMutationOperator 0.30
+;population_replacement DeterministicCrowding

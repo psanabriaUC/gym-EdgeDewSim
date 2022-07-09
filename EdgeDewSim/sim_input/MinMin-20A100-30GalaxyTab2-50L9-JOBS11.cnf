@@ -1,0 +1,25 @@
+;networkEnergyManagementEnable: true
+
+;nodeFile
+sim_input/nodes/1GalaxyTab2.cnf
+
+;loadBalancing: cl.puc.ing.edgedewsim.seas.proxy.bufferedproxy.MinMinComEnergy 11
+
+
+;batteryFile
+sim_input/device_profile/GalaxyTab2/battery0.cnf; 00000000-0000-0000-0000-000000000064
+
+;batteryFullCpuUsageFile
+sim_input/device_profile/GalaxyTab2/battery100.cnf; 00000000-0000-0000-0000-000000000064
+
+;cpuFile
+sim_input/device_profile/GalaxyTab2/cpu0.cnf; 00000000-0000-0000-0000-000000000064
+;jobsEvent
+#jobs/JOBS.cnf
+sim_input/jobs/3500_11_none.cnf
+#sim_input/jobs/3500_one_none.cnf
+#sim_input/jobs/3500_all_fixed.cnf
+#sim_input/jobs/1500_all.cnf
+
+;wifiSignalStrength
+-90; 00000000-0000-0000-0000-000000000064

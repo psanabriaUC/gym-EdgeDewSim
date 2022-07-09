@@ -1,0 +1,39 @@
+;networkEnergyManagementEnable: true
+
+;nodeFile
+sim_input/nodes/5A100.cnf
+
+;loadBalancing: cl.puc.ing.edgedewsim.server.proxy.RemoteLoadBalancing
+
+;batteryFile
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000001
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000002
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000003
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000004
+sim_input/device_profile/A100/battery0.cnf; 00000000-0000-0000-0000-000000000005
+
+
+;batteryFullCpuUsageFile
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000001
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000002
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000003
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000004
+sim_input/device_profile/A100/battery100.cnf; 00000000-0000-0000-0000-000000000005
+
+
+;cpuFile
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000001
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000002
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000003
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000004
+sim_input/device_profile/A100/cpu0.cnf; 00000000-0000-0000-0000-000000000005
+
+;jobsEvent
+sim_input/jobs/60_all.cnf
+
+;wifiSignalStrength
+-50; 00000000-0000-0000-0000-000000000001
+-50; 00000000-0000-0000-0000-000000000002
+-50; 00000000-0000-0000-0000-000000000003
+-50; 00000000-0000-0000-0000-000000000004
+-50; 00000000-0000-0000-0000-000000000005

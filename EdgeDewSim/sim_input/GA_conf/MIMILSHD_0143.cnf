@@ -1,0 +1,9 @@
+;fitness_function DataPlusCPUAwareFitnessFunction 0.5 0.5
+;gene_data 3500 100
+;population_params 100 true
+;termination_condition IncreasedFitnessTimeCondition 70000 600000
+;parent_selection TournamentParentSelector 10 true
+;crossover_operator MPointCrossoverOperator 10 0.6
+;mutation_operator RandomMutationOperator 0.15
+;population_replacement DeterministicCrowding
+;heuristic MinMin

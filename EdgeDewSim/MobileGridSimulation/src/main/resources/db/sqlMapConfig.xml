@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+
+<configuration>
+    <properties
+            resource="db/ibatis.properties"/>
+    <settings>
+        <setting name="useGeneratedKeys" value="true"/>
+    </settings>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="org.hsqldb.jdbcDriver"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="SA"/>
+                <property name="password" value=""/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="db/Simulation.xml"/>
+        <mapper resource="db/Device.xml"/>
+        <mapper resource="db/JobStats.xml"/>
+        <mapper resource="db/JobTransfered.xml"/>
+    </mappers>
+</configuration>

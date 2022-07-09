@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cl.puc.ing.edgedewsim.mobilegrid.persistence.dbentity.DeviceTuple">
+
+    <insert id="insertDevice" parameterType="cl.puc.ing.edgedewsim.mobilegrid.persistence.dbentity.DeviceTuple">
+        <selectKey keyProperty="device_id" order="BEFORE" resultType="integer">
+            CALL NEXT VALUE FOR PUBLIC.DEVICE_SEQ
+        </selectKey>
+        INSERT INTO
+        PUBLIC.DEVICE (device_id,
+        sim_id,
+        name,
+        battery_capacity,
+        mips,
+        join_topology_time,
+        left_topology_time)
+
+        VALUES (#{device_id},
+        #{sim_id},
+        #{name},
+        #{battery_capacity},
+        #{mips},
+        #{join_topology_time},
+        #{left_topology_time})
+    </insert>
+
+
+</mapper>

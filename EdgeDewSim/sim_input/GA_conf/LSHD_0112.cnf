@@ -1,0 +1,18 @@
+#	jobs_count nodes_count
+;gene_data 3500 100
+
+# possible values:	popSize includeKnownIndividualInFirstGeneration
+;population_params 100 true
+
+
+;termination_condition IncreasedFitnessTimeCondition 30000 300000
+
+# possible values:		tournamentSize withreplacementFlag
+;parent_selection TournamentParentSelector 10 true
+
+# possible values:	UniformCrossoverOperator | HalfUniformCrossoverOperator | MPointCrossoverOperator points=[2|10] pc=[0.6|0.8]
+;crossover_operator UniformCrossoverOperator 0.8
+
+;mutation_operator RandomMutationOperator 0.15
+
+;population_replacement DeterministicCrowding

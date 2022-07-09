@@ -1,0 +1,9 @@
+;fitness_function DataPlusCPUAwareFitnessFunction 0.5 0.5
+;gene_data 4000 100
+;population_params 100 cl.puc.ing.edgedewsim.seas.proxy.bufferedproxy.genetic.MinMinAndJobsCountAssignedPopGenerator
+;termination_condition IncreasedFitnessTimeCondition 30000 300000
+;parent_selection TournamentParentSelector 10 true
+;crossover_operator UniformCrossoverOperator 0.8
+;mutation_operator ConserveJobsQuantityRandomMutationOperator 0.15
+;population_replacement DeterministicCrowding
+;heuristic MinMin
